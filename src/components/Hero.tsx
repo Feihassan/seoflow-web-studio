@@ -8,7 +8,17 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted pt-16">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16">
+      {/* Hero Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80" 
+          alt="Modern web development workspace" 
+          className="w-full h-full object-cover opacity-10"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/80 to-muted/90" />
+      </div>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-pulse" />

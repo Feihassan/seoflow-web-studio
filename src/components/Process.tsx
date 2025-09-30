@@ -5,28 +5,32 @@ const steps = [
   {
     icon: MessageSquare,
     title: "Consultation",
-    description: "We discuss your goals, target audience, and project requirements to create the perfect strategy."
+    description: "We discuss your goals, target audience, and project requirements to create the perfect strategy.",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     icon: Palette,
     title: "Design & Development",
-    description: "Our team creates beautiful designs and builds your website with clean, optimized code."
+    description: "Our team creates beautiful designs and builds your website with clean, optimized code.",
+    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     icon: Rocket,
     title: "Launch",
-    description: "We thoroughly test everything, then deploy your website to production and make it live."
+    description: "We thoroughly test everything, then deploy your website to production and make it live.",
+    image: "https://images.unsplash.com/photo-1640622300473-977435c38c04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
     icon: HeadphonesIcon,
     title: "Support",
-    description: "Ongoing maintenance, updates, and support to ensure your website stays perfect."
+    description: "Ongoing maintenance, updates, and support to ensure your website stays perfect.",
+    image: "https://images.unsplash.com/photo-1553484771-371a605b060b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
 const Process = () => {
   return (
-    <section className="py-20 md:py-32 bg-muted/30">
+    <section id="process" className="py-20 md:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,8 +64,16 @@ const Process = () => {
                 )}
 
                 <div className="text-center relative z-10">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
-                    <step.icon className="h-12 w-12 text-primary-foreground" />
+                  <div className="relative w-24 h-24 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
+                    <img 
+                      src={step.image} 
+                      alt={step.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center">
+                      <step.icon className="h-10 w-10 text-white" />
+                    </div>
                   </div>
                   <div className="mb-3 text-sm font-bold text-primary">
                     Step {index + 1}

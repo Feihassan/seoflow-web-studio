@@ -94,8 +94,18 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-gradient-to-br from-background to-muted/50">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" 
+          alt="Contact us" 
+          className="w-full h-full object-cover opacity-5"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 to-muted/90" />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

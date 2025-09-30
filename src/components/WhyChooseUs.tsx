@@ -26,8 +26,18 @@ const benefits = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-background to-muted/50">
-      <div className="container mx-auto px-4">
+    <section id="why-choose-us" className="py-20 md:py-32 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" 
+          alt="Team collaboration" 
+          className="w-full h-full object-cover opacity-5"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 to-muted/90" />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
