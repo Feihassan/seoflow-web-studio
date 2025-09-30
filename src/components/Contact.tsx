@@ -73,22 +73,22 @@ const Contact = () => {
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      value: "+1 (555) 123-4567",
-      link: "https://wa.me/15551234567",
+      value: "+254727109399",
+      link: "https://wa.me/254727109399",
       color: "text-green-600"
     },
     {
       icon: Mail,
       label: "Email",
-      value: "hello@webpro.com",
-      link: "mailto:hello@webpro.com",
+      value: "faisalabdi493@gmail.com",
+      link: "mailto:faisalabdi493@gmail.com",
       color: "text-primary"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+254727109399",
+      link: "tel:+254727109399",
       color: "text-accent"
     }
   ];
